@@ -8,6 +8,8 @@ import cicontest.torcs.genome.IGenome;
 import scr.Action;
 import scr.SensorModel;
 
+import java.io.*;
+
 public class DefaultDriver extends AbstractDriver {
 
     private NeuralNetwork neuralNetwork;
@@ -100,6 +102,28 @@ public class DefaultDriver extends AbstractDriver {
         System.out.println("Acceleration: " + action.accelerate);
         System.out.println("Brake: " + action.brake);
         System.out.println("-----------------------------------------------");
+
+        BufferedWriter bw = null;
+        try {
+            bw = new BufferedWriter(new FileWriter("C:/Users/FAB/Desktop/CI/assignment/data.txt", true));
+            bw.write(Double.toString(action.accelerate));
+            bw.write(",");
+            bw.write(Double.toString(action.brake));
+            bw.write(",");
+            bw.write(Double.toString(action.steering));
+            //bw.write(",");
+            bw.newLine();
+            bw.flush();
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        } finally {                       // always close the file
+            if (bw != null) try {
+                bw.close();
+            } catch (IOException ioe2) {
+                // just ignore it
+            }
+        }
+
         return action;
     }
 }
