@@ -1,4 +1,4 @@
-import java.io.File;
+import java.io.*;
 
 import cicontest.algorithm.abstracts.AbstractAlgorithm;
 import cicontest.algorithm.abstracts.AbstractRace;
@@ -24,6 +24,7 @@ public class DefaultDriverAlgorithm extends AbstractAlgorithm {
             DefaultDriverGenome genome = new DefaultDriverGenome();
             drivers[0] = genome;
 
+
             //Start a race
             DefaultRace race = new DefaultRace();
             race.setTrack("aalborg", "road");
@@ -31,6 +32,7 @@ public class DefaultDriverAlgorithm extends AbstractAlgorithm {
 
             //for speedup set withGUI to false
             results = race.runRace(drivers, true);
+
 
             // Save genome/nn
             DriversUtils.storeGenome(drivers[0]);
@@ -53,6 +55,8 @@ public class DefaultDriverAlgorithm extends AbstractAlgorithm {
 		 * Start with -human to race against the best found
 		 *
 		 */
+
+
         DefaultDriverAlgorithm algorithm = new DefaultDriverAlgorithm();
         DriversUtils.registerMemory(algorithm.getDriverClass());
         if (args.length > 0 && args[0].equals("-show")) {
@@ -70,6 +74,7 @@ public class DefaultDriverAlgorithm extends AbstractAlgorithm {
         } else {
             algorithm.run();
         }
+
     }
 
 }

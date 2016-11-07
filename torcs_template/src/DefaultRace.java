@@ -3,7 +3,17 @@ import cicontest.algorithm.abstracts.DriversUtils;
 import cicontest.torcs.controller.Driver;
 import cicontest.torcs.controller.Human;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class DefaultRace extends AbstractRace {
+
+
+	public void DefaultRace(){
+
+
+	}
 
 	public int[] runQualification(DefaultDriverGenome[] drivers, boolean withGUI){
 		DefaultDriver[] driversList = new DefaultDriver[drivers.length + 1 ];
@@ -22,6 +32,7 @@ public class DefaultRace extends AbstractRace {
 			driversList[i] = new DefaultDriver();
 			driversList[i].loadGenome(drivers[i]);
 		}
+
 		return runRace(driversList, withGUI, true);
 	}
 

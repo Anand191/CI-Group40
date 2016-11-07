@@ -13,10 +13,22 @@ import java.io.*;
 public class DefaultDriver extends AbstractDriver {
 
     private NeuralNetwork neuralNetwork;
+    BufferedWriter outfile;
+    int niter;
 
     public DefaultDriver() {
         initialize();
+        BufferedWriter bw=null;
+        try {
+            bw = new BufferedWriter(new FileWriter("/home/luca/Documents/Programmi/Java/CI-Group40/torcs_template/data.txt", true));
+        }catch (IOException ioe) {
+            ioe.printStackTrace();
+            niter=0;
+        }
+
+        outfile = bw;
         neuralNetwork = new NeuralNetwork(12, 8, 2);
+        outfile=bw;
 //        neuralNetwork = neuralNetwork.loadGenome();
     }
 
@@ -77,6 +89,7 @@ public class DefaultDriver extends AbstractDriver {
         if (action == null) {
             action = new Action();
         }
+        niter+=1;
         action.steering = DriversUtils.alignToTrackAxis(sensors, 0.5);
         if (sensors.getSpeed() > 60.0D) {
             action.accelerate = 0.0D;
@@ -101,28 +114,23 @@ public class DefaultDriver extends AbstractDriver {
         System.out.println("Steering: " + action.steering);
         System.out.println("Acceleration: " + action.accelerate);
         System.out.println("Brake: " + action.brake);
-        System.out.println("-----------------------------------------------");
+        System.out.println("-------------------"+niter+"--------+-------------");
 
-        BufferedWriter bw = null;
         try {
-            bw = new BufferedWriter(new FileWriter("C:/Users/FAB/Desktop/CI/assignment/data.txt", true));
-            bw.write(Double.toString(action.accelerate));
-            bw.write(",");
-            bw.write(Double.toString(action.brake));
-            bw.write(",");
-            bw.write(Double.toString(action.steering));
+            //bw = new BufferedWriter(new FileWriter("/home/luca/Documents/Programmi/Java/CI-Group40/torcs_template/data.txt", true));
+            outfile.write(Double.toString(action.accelerate));
+            outfile.write(",");
+            outfile.write(Double.toString(action.brake));
+            outfile.write(",");
+            outfile.write(Double.toString(action.steering));
             //bw.write(",");
-            bw.newLine();
-            bw.flush();
+            outfile.newLine();
+            if (niter%1000==0)
+                outfile.flush();
         } catch (IOException ioe) {
             ioe.printStackTrace();
-        } finally {                       // always close the file
-            if (bw != null) try {
-                bw.close();
-            } catch (IOException ioe2) {
-                // just ignore it
-            }
         }
+
 
         return action;
     }
