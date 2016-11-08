@@ -7,6 +7,7 @@ import cicontest.torcs.controller.extras.AutomatedRecovering;
 import cicontest.torcs.genome.IGenome;
 import scr.Action;
 import scr.SensorModel;
+import java.lang.Math;
 
 import java.io.*;
 
@@ -20,7 +21,7 @@ public class DefaultDriver extends AbstractDriver {
         initialize();
         BufferedWriter bw=null;
         try {
-            bw = new BufferedWriter(new FileWriter("/home/luca/Documents/Programmi/Java/CI-Group40/torcs_template/data.txt", true));
+            bw = new BufferedWriter(new FileWriter("C:/Users/Anand/Desktop/UvA/Period 2/Computational Intelligence/CI-Group40/torcs_template/data.txt", true));
         }catch (IOException ioe) {
             ioe.printStackTrace();
             niter=0;
@@ -90,8 +91,30 @@ public class DefaultDriver extends AbstractDriver {
             action = new Action();
         }
         niter+=1;
-        action.steering = DriversUtils.alignToTrackAxis(sensors, 0.5);
-        if (sensors.getSpeed() > 60.0D) {
+        //action.steering = DriversUtils.alignToTrackAxis(sensors, 0.5);
+
+        double[] tracksensor = sensors.getTrackEdgeSensors();
+        double max = 0.0;
+        int maxI = 9;
+        for(int i=0;i<19;i++){
+           if (tracksensor[i]>max){
+               max = tracksensor[i];
+               maxI = i;
+           }
+        }
+        double alpha0 = 1.0;
+        double alpha1 = 0.8;
+        double turn = alpha0*Math.signum((9-maxI))*Math.pow(Math.abs((9-maxI))/9.0, alpha1); //+ alpha2*(max/tracksensor[9])^alpha3;
+        if (tracksensor[0] < 1.5){
+              turn -= 0.07;
+        }
+        else if (tracksensor[18] < 1.5){
+            turn += 0.07;
+        }
+        action.steering = turn;
+
+
+        /*if (sensors.getSpeed() > 60.0D) {
             action.accelerate = 0.0D;
             action.brake = 0.0D;
         }
@@ -109,7 +132,31 @@ public class DefaultDriver extends AbstractDriver {
         if (sensors.getSpeed() < 30.0D) {
             action.accelerate = 1.0D;
             action.brake = 0.0D;
+        }*/
+        double theta0 = 1/2.1;
+        double theta1 = 1.2;
+        double beta0 = 1.3;
+        double brakeThreshold = theta0*Math.pow(sensors.getSpeed(),theta1);
+        brakeThreshold += beta0/((max-Math.max(tracksensor[maxI-1],tracksensor[maxI+1]))+1);
+        double theta2=0.1;
+        double val=0;
+        action.accelerate = 1.0D;
+        action.brake = 0.0D;
+        val=Math.tanh(theta2*(max-brakeThreshold));
+        if (val<0){
+            action.accelerate = 0.0D;
+            action.brake = val;
         }
+        else{
+            action.accelerate = val;
+            action.brake = 0.0D;
+        }
+
+        if (sensors.getSpeed() <= 75.0D) {
+            action.accelerate = 1.0D;
+            action.brake = 0.0D;
+        }
+
         System.out.println("--------------" + getDriverName() + "--------------");
         System.out.println("Steering: " + action.steering);
         System.out.println("Acceleration: " + action.accelerate);
