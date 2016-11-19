@@ -94,68 +94,178 @@ public class DefaultDriver extends AbstractDriver {
         //action.steering = DriversUtils.alignToTrackAxis(sensors, 0.5);
 
         double[] tracksensor = sensors.getTrackEdgeSensors();
+
         double max = 0.0;
         int maxI = 9;
         for(int i=0;i<19;i++){
-           if (tracksensor[i]>max){
-               max = tracksensor[i];
-               maxI = i;
-           }
+            if (tracksensor[i]>max){
+                max = tracksensor[i];
+                maxI = i;
+            }
         }
-        double alpha0 = 1.0;
-        double alpha1 = 0.8;
-        double turn = alpha0*Math.signum((9-maxI))*Math.pow(Math.abs((9-maxI))/9.0, alpha1); //+ alpha2*(max/tracksensor[9])^alpha3;
+        double turn = (9 - maxI)/8.0;
+        double maxspeed;
+
         if (tracksensor[0] < 1.5){
-              turn -= 0.07;
+            turn -= 0.05;
         }
         else if (tracksensor[18] < 1.5){
-            turn += 0.07;
+            turn += 0.05;
         }
-        action.steering = turn;
+        action.steering = turn;// *5/7.0D + 2*DriversUtils.alignToTrackAxis(sensors, 0.5)/7.0D;
 
+        if (Math.abs(turn)<0.05D){
+            maxspeed = 170;
+        } else if (Math.abs(turn)<0.1D){
+            maxspeed =150;
+        } else if (Math.abs(turn)<0.2D){
+            maxspeed =120;
+        } else if (Math.abs(turn)<0.3D){
+            maxspeed = 90;
+        } else if (Math.abs(turn)<0.6D){
+            maxspeed = 60;
+        } else{
+            maxspeed = 30;
+        }
 
-        /*if (sensors.getSpeed() > 60.0D) {
+        if (max<50){
+            maxspeed=Math.min(maxspeed, 100);
+        } else if (max<130){
+            maxspeed=Math.min(maxspeed, 130);
+        }
+
+        action.accelerate = 1.0;
+        action.brake = 0.0D;
+
+        if (sensors.getSpeed()>maxspeed){
             action.accelerate = 0.0D;
-            action.brake = 0.0D;
+            action.brake = 1.0D;
         }
 
-        if (sensors.getSpeed() > 70.0D) {
-            action.accelerate = 0.0D;
-            action.brake = -1.0D;
+        /*double[][] s = new double[19][2];
+
+        double maxR=0.0D;
+        double maxL = 0.0D;
+        int idxL = 0, idxR = 0;
+
+        for(int i=0; i<19; i++){
+            s[i][0] = -Math.cos(Math.PI*i/18)*tracksensor[i];
+            s[i][1] = Math.sin(Math.PI*i/18)*tracksensor[i];
+            if (tracksensor[i]>maxL){
+                maxL = tracksensor[i];
+                idxL = i;
+            }
+            if (tracksensor[18-i] > maxR){
+                maxR = tracksensor[i];
+                idxR = i;
+            }
         }
+
+        double[][] r = new double[19][2];
+        double[][] l = new double[19][2];
+        double norm;
+
+        for(int i=0; i<idxL; i++){
+            norm = Math.pow(Math.pow(s[i+1][0]-s[i][0], 2.0D)+ Math.pow(s[i+1][1]-s[i][1], 2.0D), 0.5D);
+            r[i][0] = (s[i+1][0] - s[i][0]) / norm;
+            r[i][1] = (s[i+1][1] - s[i][1]) / norm;
+        }
+
+        for(int i=0; i<18-idxR; i++){
+            norm = Math.pow(Math.pow(s[17-i][0]-s[18-i][0], 2.0D)+ Math.pow(s[17-i][1]-s[18-i][1], 2.0D), 0.5D);
+            l[i][0] = (s[17-i][0] - s[18-i][0]) / norm;
+            l[i][1] = (s[17-i][1] - s[18-i][1]) / norm;
+        }
+
+        double rho = 0.0D;
+        double dot;
+        for (int i=0; i<idxL; i++){
+            dot = l[i][0]*l[i+1][0] + l[i][1]*l[i+1][1];
+            rho += Math.acos(dot)*180/Math.PI * Math.signum(l[i][0]*l[i+1][1] - l[i][1]*l[i+1][0]);
+        }
+        for (int i=0; i < 17-idxR; i++){
+            dot = r[i][0]*r[i+1][0] + r[i][1]*r[i+1][1];
+            rho += Math.acos(dot)*180/Math.PI * Math.signum(r[i][0]*r[i+1][1] - r[i][1]*r[i+1][0]);
+        }
+        System.out.println(rho);
+        double aR = Math.abs(rho);
+        double lambda0, lambda1;
+        if (aR < 3){
+            lambda0 = 250.0D;
+            lambda1 = -1.0D;
+        }else if(aR < 25){
+            lambda0 = 180.0D;
+            lambda1 = -1.0D;
+        }else if(aR < 35){
+            lambda0 = 140.0D;
+            lambda1 = -1.0D;
+        }else if(aR < 45){
+            lambda0 = 100.0D;
+            lambda1 = -1.0D;
+        } else if(aR < 55){
+            lambda0 = 75.0D;
+            lambda1 = -1.0D;
+            turn *= 2;
+        } else{
+            lambda0 = 60.0D;
+            lambda1 = -1.0D;
+            turn *= 3;
+        }
+        double a = lambda1*sensors.getSpeed() + lambda0;
+        action.accelerate = Math.max(a, 0.0D);
+        action.brake = Math.max(-a, 0.0D);
+
+        if (tracksensor[0] < 1.5){
+            turn -= 0.05;
+        }
+        else if (tracksensor[18] < 1.5){
+            turn += 0.05;
+        }
+        action.steering = 3*turn/5.0D + 2*DriversUtils.alignToTrackAxis(sensors, 0.5)/5.0D;
+
+
+        System.out.println(sensors.getZSpeed());
+        System.out.println(sensors.getSpeed());
+
+        if (sensors.getZSpeed()/sensors.getSpeed() > 0.01D){
+            if (sensors.getSpeed()> 150){
+                action.accelerate = 0.0D;
+                action.brake = 0.8D;
+            }
+        }*/
+
+
+
+        //double turn = (tracksensor[8] - tracksensor[10])/(tracksensor[10] + tracksensor[8]);
+
+
+
+
+        /*double alpha0 = 1.0D;
+        double alpha1 = 1.0D;
+        double beta0 = 1.0D;
+        double beta1 = 1.0D;
+        double brakeThreshold = Math.pow(10,8);
+
+        brakeThreshold  *= Math.pow(alpha0*sensors.getSpeed(), alpha1);
+
+        double steepness = Math.exp( Math.max(tracksensor[maxI-1], tracksensor[maxI+1]) - max );
+        brakeThreshold *= Math.pow(beta0/steepness , beta1);
+
+        double theta = 10.0;
+        double val;
+        action.accelerate = 1.0;
+        action.brake = 0.0D;
+        val = Math.tanh(theta*(max - brakeThreshold));
+
+        action.accelerate = Math.max(val, 0);
+        action.brake = Math.max(0, -val);
 
         if (sensors.getSpeed() <= 60.0D) {
-            action.accelerate = (80.0D - sensors.getSpeed()) / 80.0D;
-            action.brake = 0.0D;
-        }
-
-        if (sensors.getSpeed() < 30.0D) {
             action.accelerate = 1.0D;
             action.brake = 0.0D;
         }*/
-        double theta0 = 1/2.1;
-        double theta1 = 1.2;
-        double beta0 = 1.3;
-        double brakeThreshold = theta0*Math.pow(sensors.getSpeed(),theta1);
-        brakeThreshold += beta0/((max-Math.max(tracksensor[maxI-1],tracksensor[maxI+1]))+1);
-        double theta2=0.1;
-        double val=0;
-        action.accelerate = 1.0D;
-        action.brake = 0.0D;
-        val=Math.tanh(theta2*(max-brakeThreshold));
-        if (val<0){
-            action.accelerate = 0.0D;
-            action.brake = val;
-        }
-        else{
-            action.accelerate = val;
-            action.brake = 0.0D;
-        }
 
-        if (sensors.getSpeed() <= 75.0D) {
-            action.accelerate = 1.0D;
-            action.brake = 0.0D;
-        }
 
         System.out.println("--------------" + getDriverName() + "--------------");
         System.out.println("Steering: " + action.steering);
@@ -164,12 +274,23 @@ public class DefaultDriver extends AbstractDriver {
         System.out.println("-------------------"+niter+"--------+-------------");
 
         try {
-            //bw = new BufferedWriter(new FileWriter("/home/luca/Documents/Programmi/Java/CI-Group40/torcs_template/data.txt", true));
             outfile.write(Double.toString(action.accelerate));
-            outfile.write(",");
+            outfile.write(", ");
             outfile.write(Double.toString(action.brake));
-            outfile.write(",");
+            outfile.write(", ");
             outfile.write(Double.toString(action.steering));
+            outfile.write(", ");
+            for (int i=0; i<19; i++) {
+                outfile.write(Double.toString(tracksensor[i]));
+                outfile.write(", ");
+            }
+            outfile.write(Double.toString(sensors.getZSpeed()));
+            outfile.write(", ");
+            outfile.write(Double.toString(sensors.getAngleToTrackAxis()));
+            outfile.write(", ");
+            outfile.write(Double.toString(sensors.getSpeed()));
+            outfile.write(", ");
+            outfile.write(Double.toString(sensors.getGear()));
             //bw.write(",");
             outfile.newLine();
             if (niter%1000==0)
