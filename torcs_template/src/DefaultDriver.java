@@ -21,7 +21,7 @@ public class DefaultDriver extends AbstractDriver {
         initialize();
         BufferedWriter bw=null;
         try {
-            bw = new BufferedWriter(new FileWriter("C:/Users/Anand/Desktop/UvA/Period 2/Computational Intelligence/CI-Group40/torcs_template/data.txt", true));
+            bw = new BufferedWriter(new FileWriter("./data.txt", true));
         }catch (IOException ioe) {
             ioe.printStackTrace();
             niter=0;
@@ -30,7 +30,15 @@ public class DefaultDriver extends AbstractDriver {
         outfile = bw;
         neuralNetwork = new NeuralNetwork(12, 8, 2);
         outfile=bw;
-//        neuralNetwork = neuralNetwork.loadGenome();
+        neuralNetwork = neuralNetwork.loadGenome();
+        System.out.println("-------------- NN caricato ------------");
+        for(int i=0;i<19;i++)
+            neuralNetwork.weights[i]+=(Math.random()-0.5)/10;
+        for(int i=0;i<19;i++)
+            System.out.println(neuralNetwork.weights[i]);
+
+
+
     }
 
     private void initialize() {
@@ -38,6 +46,10 @@ public class DefaultDriver extends AbstractDriver {
         this.enableExtras(new AutomatedGearbox());
         this.enableExtras(new AutomatedRecovering());
         this.enableExtras(new ABS());
+    }
+    public void saveNetwork()
+    {
+        neuralNetwork.storeGenome();
     }
 
     @Override
@@ -103,7 +115,7 @@ public class DefaultDriver extends AbstractDriver {
                 maxI = i;
             }
         }
-        double turn = (9 - maxI)/8.0;
+        double turn = (9 - maxI)/9.0;
         double maxspeed;
 
         if (tracksensor[0] < 1.5){
@@ -112,27 +124,11 @@ public class DefaultDriver extends AbstractDriver {
         else if (tracksensor[18] < 1.5){
             turn += 0.05;
         }
-        action.steering = turn;// *5/7.0D + 2*DriversUtils.alignToTrackAxis(sensors, 0.5)/7.0D;
 
-        if (Math.abs(turn)<0.05D){
-            maxspeed = 170;
-        } else if (Math.abs(turn)<0.1D){
-            maxspeed =150;
-        } else if (Math.abs(turn)<0.2D){
-            maxspeed =120;
-        } else if (Math.abs(turn)<0.3D){
-            maxspeed = 90;
-        } else if (Math.abs(turn)<0.6D){
-            maxspeed = 60;
-        } else{
-            maxspeed = 30;
-        }
+            action.steering = turn;//*5/7.0D + 2*DriversUtils.alignToTrackAxis(sensors, 0.5)/7.0D;
 
-        if (max<50){
-            maxspeed=Math.min(maxspeed, 100);
-        } else if (max<130){
-            maxspeed=Math.min(maxspeed, 130);
-        }
+        maxspeed=neuralNetwork.getOutput(sensors);
+
 
         action.accelerate = 1.0;
         action.brake = 0.0D;
@@ -169,6 +165,7 @@ public class DefaultDriver extends AbstractDriver {
             norm = Math.pow(Math.pow(s[i+1][0]-s[i][0], 2.0D)+ Math.pow(s[i+1][1]-s[i][1], 2.0D), 0.5D);
             r[i][0] = (s[i+1][0] - s[i][0]) / norm;
             r[i][1] = (s[i+1][1] - s[i][1]) / norm;
+
         }
 
         for(int i=0; i<18-idxR; i++){
@@ -220,6 +217,7 @@ public class DefaultDriver extends AbstractDriver {
         }
         else if (tracksensor[18] < 1.5){
             turn += 0.05;
+
         }
         action.steering = 3*turn/5.0D + 2*DriversUtils.alignToTrackAxis(sensors, 0.5)/5.0D;
 
@@ -237,6 +235,7 @@ public class DefaultDriver extends AbstractDriver {
 
 
         //double turn = (tracksensor[8] - tracksensor[10])/(tracksensor[10] + tracksensor[8]);
+
 
 
 
@@ -267,11 +266,13 @@ public class DefaultDriver extends AbstractDriver {
         }*/
 
 
+        if(niter%100==0){
+
         System.out.println("--------------" + getDriverName() + "--------------");
         System.out.println("Steering: " + action.steering);
         System.out.println("Acceleration: " + action.accelerate);
         System.out.println("Brake: " + action.brake);
-        System.out.println("-------------------"+niter+"--------+-------------");
+        System.out.println("-------------------"+niter+"--------+-------------");}
 
         try {
             outfile.write(Double.toString(action.accelerate));

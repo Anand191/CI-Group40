@@ -1,6 +1,7 @@
 import java.io.*;
 
 import cicontest.algorithm.abstracts.AbstractAlgorithm;
+import cicontest.algorithm.abstracts.AbstractDriver;
 import cicontest.algorithm.abstracts.AbstractRace;
 import cicontest.algorithm.abstracts.DriversUtils;
 import cicontest.torcs.controller.Driver;
@@ -10,9 +11,9 @@ import race.TorcsConfiguration;
 public class DefaultDriverAlgorithm extends AbstractAlgorithm {
 
     private static final long serialVersionUID = 654963126362653L;
-
-    DefaultDriverGenome[] drivers = new DefaultDriverGenome[1];
-    int[] results = new int[1];
+    int n=10;
+    DefaultDriverGenome[] drivers = new DefaultDriverGenome[n];
+    int[] results = new int[n];
 
     public Class<? extends Driver> getDriverClass() {
         return DefaultDriver.class;
@@ -22,7 +23,10 @@ public class DefaultDriverAlgorithm extends AbstractAlgorithm {
         if (!continue_from_checkpoint) {
             //init NN
             DefaultDriverGenome genome = new DefaultDriverGenome();
-            drivers[0] = genome;
+            for(int i=0;i<n;i++)
+                drivers[i] = genome;
+
+
 
 
             //Start a race
@@ -31,11 +35,13 @@ public class DefaultDriverAlgorithm extends AbstractAlgorithm {
             race.laps = 1;
 
             //for speedup set withGUI to false
-            results = race.runRace(drivers, true);
+            results = race.runRace(drivers, false);
+
 
 
             // Save genome/nn
-            DriversUtils.storeGenome(drivers[0]);
+            System.out.println(results[0]);
+            DriversUtils.storeGenome(drivers[results[0]-1]);
         }
         // create a checkpoint this allows you to continue this run later
         DriversUtils.createCheckpoint(this);

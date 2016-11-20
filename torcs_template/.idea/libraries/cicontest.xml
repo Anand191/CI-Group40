@@ -6,6 +6,9 @@
     <JAVADOC />
     <SOURCES>
       <root url="jar://$PROJECT_DIR$/lib/cicontest.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/cicontest.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/cicontest.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/cicontest.jar!/" />
     </SOURCES>
   </library>
 </component>
