@@ -21,7 +21,7 @@ public class DefaultDriver extends AbstractDriver {
         initialize();
         BufferedWriter bw=null;
         try {
-            bw = new BufferedWriter(new FileWriter("./data.txt", true));
+            bw = new BufferedWriter(new FileWriter("/home/anand/UvA/Period 2/data.txt", true));
         }catch (IOException ioe) {
             ioe.printStackTrace();
             niter=0;
@@ -30,12 +30,13 @@ public class DefaultDriver extends AbstractDriver {
         outfile = bw;
         neuralNetwork = new NeuralNetwork(12, 8, 2);
         outfile=bw;
-        neuralNetwork = neuralNetwork.loadGenome();
+        //neuralNetwork.storeGenome();
+        /*neuralNetwork = neuralNetwork.loadGenome();
         System.out.println("-------------- NN caricato ------------");
         for(int i=0;i<19;i++)
             neuralNetwork.weights[i]+=(Math.random()-0.5)/10;
         for(int i=0;i<19;i++)
-            System.out.println(neuralNetwork.weights[i]);
+            System.out.println(neuralNetwork.weights[i]);*/
 
 
 
@@ -47,10 +48,11 @@ public class DefaultDriver extends AbstractDriver {
         this.enableExtras(new AutomatedRecovering());
         this.enableExtras(new ABS());
     }
+    /*
     public void saveNetwork()
     {
         neuralNetwork.storeGenome();
-    }
+    }*/
 
     @Override
     public void loadGenome(IGenome genome) {
@@ -125,13 +127,15 @@ public class DefaultDriver extends AbstractDriver {
             turn += 0.05;
         }
 
-            action.steering = turn;//*5/7.0D + 2*DriversUtils.alignToTrackAxis(sensors, 0.5)/7.0D;
+            action.steering = turn*6/7.0D + DriversUtils.alignToTrackAxis(sensors, 0.5)/7.0D;
 
-        maxspeed=neuralNetwork.getOutput(sensors);
-
+        maxspeed = neuralNetwork.getOutput(sensors);
+        System.out.println(maxspeed);
 
         action.accelerate = 1.0;
         action.brake = 0.0D;
+
+        maxspeed = Math.max(30.0D,maxspeed);
 
         if (sensors.getSpeed()>maxspeed){
             action.accelerate = 0.0D;

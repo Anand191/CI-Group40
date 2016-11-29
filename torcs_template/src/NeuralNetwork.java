@@ -5,40 +5,149 @@ import java.io.*;
 public class NeuralNetwork implements Serializable {
 
     private static final long serialVersionUID = -88L;
-    double[] weights;
-    double[][] steering;
-    double[] out_steering;
+    double w_0 [][] = new double[21][20];
+    double b_0 [] = new double[20];
+    double w_1[] = new double[20];
+    double b_1 = 0.0;
 
     NeuralNetwork(int inputs, int hidden, int outputs) {
         System.out.println("-------------- bella zio costruisco un NN ------------");
-        weights=new double[19];
-        out_steering=new double[2];
-        steering=new double[2][19];
-        for(int i=0;i<19;i++)
-        { steering[0][i]=0;
-        steering[1][i]=0 ;
-         weights[i]= 1/10.;}
+        String path = "/home/anand/UvA/Period 2/Computational Intelligence/Codes/Simple_NN/";
+        String files0 = path+"Weights_0.csv";
+        String files1 = path+"Weights_1.csv";
+        String files2 = path+"Weights_2.csv";
+        String files3 = path+"Weights_3.csv";
+
+        BufferedReader br = null;
+        String line = "";
+        String cvsSplitBy = ",";
+
+        try {
+
+            br = new BufferedReader(new FileReader(files0));
+            int i = 0;
+            while ((line = br.readLine()) != null) {
+
+                // use comma as separator
+                String[] w = line.split(cvsSplitBy);
+
+                for (int j=0; j<w.length; j++){
+                   w_0 [i][j] = Double.parseDouble(w[j]);
+                }
+                i++;
+
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+
+            br = new BufferedReader(new FileReader(files1));
+            int i = 0;
+            while ((line = br.readLine()) != null) {
+
+                // use comma as separator
+                b_0 [i] = Double.parseDouble(line.split(cvsSplitBy)[0]);
+                i++;
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+
+            br = new BufferedReader(new FileReader(files2));
+            int i =0;
+            while ((line = br.readLine()) != null) {
+
+                // use comma as separator
+
+                w_1 [i] = Double.parseDouble(line.split(cvsSplitBy)[0]);
+                i++;
+
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+
+            br = new BufferedReader(new FileReader(files3));
+            if ((line = br.readLine()) != null) {
+
+                // use comma as separator
+                    b_1  = Double.parseDouble(line.split(cvsSplitBy)[0]);
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+
+//        weights=new double[19];
+//        out_steering=new double[2];
+//        steering=new double[2][19];
+//        for(int i=0;i<19;i++)
+//        { steering[0][i]=0;
+//        steering[1][i]=0 ;
+//         weights[i]= 1/10.;}
     }
 
     public double getOutput(SensorModel a) {
         double[] tracksensor = a.getTrackEdgeSensors();
-        double res=0;
-        for(int i=0;i<19;i++){
-            res+=tracksensor[i]*weights[i];
+        double[] input = new double[21];
+        for (int i=0;i<19;i++){
+            input[i] = tracksensor[i];
         }
-        return res;
+        input[19] = a.getZSpeed();
+        input[20] = a.getAngleToTrackAxis();
+
+        double[] res = new double[20];
+        for(int i=0; i<21; i++){
+            for (int j=0; j <20; j++){
+                res[j] += input[i]*w_0[i][j];
+            }
+        }
+        for (int i=0; i <20; i++){
+           res[i] += b_0[i];
+           res[i] = Math.max(0.0D, res[i]);
+        }
+
+        double res2 = 0;
+        for (int i=0; i <20; i++){
+            res2 += res[i]*w_1[i];
+        }
+        res2 += b_1;
+
+
+        return res2;
     }
+
+
     public double getSteering(SensorModel a) {
         double[] tracksensor = a.getTrackEdgeSensors();
         double res=0;
         for(int i=0;i<19;i++){
-            res+=tracksensor[i]*steering[0][i];
+
         }
         return res;
     }
 
     //Store the state of this neural network
-    public void storeGenome() {
+   /* public void storeGenome() {
         ObjectOutputStream out = null;
         try {
             //create the memory folder manually
@@ -91,6 +200,6 @@ public class NeuralNetwork implements Serializable {
             e.printStackTrace();
         }
         return null;
-    }
+    }*/
 
 }

@@ -33,9 +33,10 @@ public class DefaultRace extends AbstractRace {
 			driversList[i].loadGenome(drivers[i]);
 		}
 
-        int[] results=runRace(driversList, withGUI, true);
+        /*int[] results=runRace(driversList, withGUI, true);
 		driversList[results[0]-1].saveNetwork();
-		return results;
+		return results;*/
+        return runRace(driversList, withGUI, true);
 
 
 	}
