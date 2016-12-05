@@ -2,16 +2,557 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b0f041d-b1ad-469c-8e3a-21f73ca597f1" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/META-INF/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/META-INF/mailcap.default" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/META-INF/maven/com.thoughtworks.xstream/xstream/pom.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/META-INF/maven/com.thoughtworks.xstream/xstream/pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/META-INF/mimetypes.default" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/META-INF/services/org.xmlpull.v1.XmlPullParserFactory" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/XMLPULL_1_1_3_1_VERSION" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/XPP3_1.1.4c_MIN_VERSION" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/algorithm/abstracts/AbstractAlgorithm.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/algorithm/abstracts/AbstractDriver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/algorithm/abstracts/AbstractRace.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/algorithm/abstracts/DriversUtils$RelativePosition.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/algorithm/abstracts/DriversUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/algorithm/abstracts/IsolatedAbstractsLoader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/algorithm/abstracts/map/Corner.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/algorithm/abstracts/map/TrackMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/torcs/client/CiClient$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/torcs/client/CiClient.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/torcs/client/MemoryContainer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/torcs/client/TorcsUtilities.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/torcs/controller/Driver$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/torcs/controller/Driver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/torcs/controller/GenomeDriver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/torcs/controller/Human.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/torcs/controller/RemoteDriver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/torcs/controller/extras/ABS.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/torcs/controller/extras/AutomatedClutch.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/torcs/controller/extras/AutomatedGearbox.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/torcs/controller/extras/AutomatedRecovering.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/torcs/controller/extras/IExtra.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/torcs/genome/ClassLoaderObjectInputStream.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/torcs/genome/IGenome.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/torcs/genome/Utilities.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/torcs/race/CompetitionResult.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/torcs/race/GenerateConfigFiles.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/torcs/race/Race$Termination.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/torcs/race/Race.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/torcs/race/RaceDay.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/torcs/race/RaceResult.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/cicontest/torcs/race/RaceResults.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/sun/activation/registries/LineTokenizer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/sun/activation/registries/LogSupport.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/sun/activation/registries/MailcapFile.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/sun/activation/registries/MailcapParseException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/sun/activation/registries/MailcapTokenizer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/sun/activation/registries/MimeTypeEntry.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/sun/activation/registries/MimeTypeFile.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/sun/activation/viewers/ImageViewer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/sun/activation/viewers/ImageViewerCanvas.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/sun/activation/viewers/TextEditor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/sun/activation/viewers/TextViewer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/InitializationException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/MarshallingStrategy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/XStream$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/XStream$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/XStream$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/XStream$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/XStream$InitializationException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/XStream.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/XStreamException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/XStreamer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/annotations/AnnotationProvider.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/annotations/AnnotationReflectionConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/annotations/Annotations.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/annotations/XStreamAlias.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/annotations/XStreamAliasType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/annotations/XStreamAsAttribute.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/annotations/XStreamContainedType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/annotations/XStreamConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/annotations/XStreamConverters.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/annotations/XStreamImplicit.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/annotations/XStreamImplicitCollection.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/annotations/XStreamInclude.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/annotations/XStreamOmitField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/ConversionException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/Converter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/ConverterLookup.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/ConverterMatcher.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/ConverterRegistry.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/DataHolder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/ErrorReporter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/ErrorWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/ErrorWritingException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/MarshallingContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/SingleValueConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/SingleValueConverterWrapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/UnmarshallingContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/basic/AbstractSingleValueConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/basic/BigDecimalConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/basic/BigIntegerConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/basic/BooleanConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/basic/ByteConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/basic/CharConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/basic/DateConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/basic/DoubleConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/basic/FloatConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/basic/IntConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/basic/LongConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/basic/NullConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/basic/ShortConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/basic/StringBufferConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/basic/StringBuilderConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/basic/StringConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/basic/URIConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/basic/URLConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/basic/UUIDConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/collections/AbstractCollectionConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/collections/ArrayConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/collections/BitSetConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/collections/CharArrayConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/collections/CollectionConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/collections/MapConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/collections/PropertiesConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/collections/SingletonCollectionConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/collections/SingletonMapConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/collections/TreeMapConverter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/collections/TreeMapConverter$NullComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/collections/TreeMapConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/collections/TreeSetConverter$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/collections/TreeSetConverter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/collections/TreeSetConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/enums/EnumConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/enums/EnumMapConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/enums/EnumSetConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/enums/EnumSingleValueConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/enums/EnumToStringConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/ActivationDataFlavorConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/CharsetConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/ColorConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/CurrencyConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/DurationConverter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/DurationConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/DynamicProxyConverter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/DynamicProxyConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/EncodedByteArrayConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/FileConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/FontConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/GregorianCalendarConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/ISO8601DateConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/ISO8601GregorianCalendarConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/ISO8601SqlTimestampConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/JavaClassConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/JavaFieldConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/JavaMethodConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/LocaleConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/LookAndFeelConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/NamedArrayConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/NamedCollectionConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/NamedMapConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/PathConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/PropertyEditorCapableConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/RegexPatternConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/SqlDateConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/SqlTimeConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/SqlTimestampConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/StackTraceElementConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/StackTraceElementFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/StackTraceElementFactory15.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/SubjectConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/TextAttributeConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/ThrowableConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/ToAttributedValueConverter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/ToAttributedValueConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/ToStringConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/extended/UseAttributeForEnumMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/javabean/BeanProperty.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/javabean/BeanProvider$Visitor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/javabean/BeanProvider.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/javabean/ComparingPropertySorter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/javabean/JavaBeanConverter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/javabean/JavaBeanConverter$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/javabean/JavaBeanConverter$DuplicateFieldException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/javabean/JavaBeanConverter$DuplicatePropertyException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/javabean/JavaBeanConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/javabean/JavaBeanProvider$Visitor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/javabean/JavaBeanProvider.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/javabean/NativePropertySorter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/javabean/PropertyDictionary.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/javabean/PropertySorter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/AbstractAttributedCharacterIteratorAttributeConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/AbstractReflectionConverter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/AbstractReflectionConverter$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/AbstractReflectionConverter$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/AbstractReflectionConverter$ArraysList.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/AbstractReflectionConverter$DuplicateFieldException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/AbstractReflectionConverter$FieldInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/AbstractReflectionConverter$FieldLocation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/AbstractReflectionConverter$MappingList.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/AbstractReflectionConverter$UnknownFieldException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/AbstractReflectionConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/CGLIBEnhancedConverter$CGLIBFilteringReflectionProvider$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/CGLIBEnhancedConverter$CGLIBFilteringReflectionProvider.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/CGLIBEnhancedConverter$ReverseEngineeredCallbackFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/CGLIBEnhancedConverter$ReverseEngineeringInvocationHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/CGLIBEnhancedConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/ExternalizableConverter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/ExternalizableConverter$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/ExternalizableConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/FieldDictionary$DictionaryEntry.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/FieldDictionary.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/FieldKey.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/FieldKeySorter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/ImmutableFieldKeySorter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/LambdaConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/MissingFieldException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/NativeFieldKeySorter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/NativeFieldKeySorter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/ObjectAccessException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/PureJavaReflectionProvider$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/PureJavaReflectionProvider.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/ReflectionConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/ReflectionProvider$Visitor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/ReflectionProvider.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/ReflectionProviderWrapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/SelfStreamingInstanceChecker.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/SerializableConverter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/SerializableConverter$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/SerializableConverter$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/SerializableConverter$UnserializableParentsReflectionProvider$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/SerializableConverter$UnserializableParentsReflectionProvider.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/SerializableConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/SerializationMethodInvoker.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/SortableFieldKeySorter$FieldComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/SortableFieldKeySorter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/Sun14ReflectionProvider.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/SunLimitedUnsafeReflectionProvider.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/SunUnsafeReflectionProvider.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/XStream12FieldKeySorter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/converters/reflection/XStream12FieldKeySorter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/AbstractReferenceMarshaller$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/AbstractReferenceMarshaller$Id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/AbstractReferenceMarshaller$ReferencedImplicitElementException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/AbstractReferenceMarshaller.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/AbstractReferenceUnmarshaller.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/AbstractTreeMarshallingStrategy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/BaseException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/Caching.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/ClassLoaderReference.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/DefaultConverterLookup.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/JVM$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/JVM$Test.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/JVM.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/MapBackedDataHolder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/ReferenceByIdMarshaller$IDGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/ReferenceByIdMarshaller.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/ReferenceByIdMarshallingStrategy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/ReferenceByIdUnmarshaller.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/ReferenceByXPathMarshaller.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/ReferenceByXPathMarshallingStrategy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/ReferenceByXPathUnmarshaller.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/ReferencingMarshallingContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/SequenceGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/TreeMarshaller$CircularReferenceException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/TreeMarshaller.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/TreeMarshallingStrategy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/TreeUnmarshaller.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/ArrayIterator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/Base64Encoder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/ClassLoaderReference$Replacement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/ClassLoaderReference.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/Cloneables.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/CompositeClassLoader$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/CompositeClassLoader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/CustomObjectInputStream$CustomGetField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/CustomObjectInputStream$StreamCallback.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/CustomObjectInputStream.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/CustomObjectOutputStream$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/CustomObjectOutputStream$CustomPutField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/CustomObjectOutputStream$StreamCallback.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/CustomObjectOutputStream.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/DependencyInjectionFactory$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/DependencyInjectionFactory$TypedValue.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/DependencyInjectionFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/FastField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/FastStack.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/Fields.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/HierarchicalStreams.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/ObjectIdDictionary$IdWrapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/ObjectIdDictionary$WeakIdWrapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/ObjectIdDictionary$Wrapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/ObjectIdDictionary.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/OrderRetainingMap$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/OrderRetainingMap$ArraySet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/OrderRetainingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/Pool$Factory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/Pool.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/PresortedMap$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/PresortedMap$ArraySet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/PresortedMap$ArraySetComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/PresortedMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/PresortedSet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/Primitives.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/PrioritizedList$PrioritizedItem.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/PrioritizedList$PrioritizedItemIterator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/PrioritizedList.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/QuickWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/SelfStreamingInstanceChecker.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/SerializationMembers$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/SerializationMembers.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/ThreadSafePropertyEditor$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/ThreadSafePropertyEditor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/ThreadSafeSimpleDateFormat$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/ThreadSafeSimpleDateFormat.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/TypedNull.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/Types.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/WeakCache$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/WeakCache$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/WeakCache$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/WeakCache$4$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/WeakCache$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/WeakCache$Visitor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/WeakCache.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/core/util/XmlHeaderAwareReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/AbstractDriver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/AbstractReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/AbstractWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/AttributeNameIterator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/ExtendedHierarchicalStreamReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/ExtendedHierarchicalStreamWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/ExtendedHierarchicalStreamWriterHelper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/HierarchicalStreamDriver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/HierarchicalStreamReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/HierarchicalStreamWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/ReaderWrapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/StatefulWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/StreamException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/WriterWrapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/binary/BinaryStreamDriver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/binary/BinaryStreamReader$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/binary/BinaryStreamReader$IdRegistry.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/binary/BinaryStreamReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/binary/BinaryStreamWriter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/binary/BinaryStreamWriter$IdRegistry.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/binary/BinaryStreamWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/binary/ReaderDepthState$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/binary/ReaderDepthState$Attribute.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/binary/ReaderDepthState$State.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/binary/ReaderDepthState.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/binary/Token$Attribute.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/binary/Token$EndNode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/binary/Token$Formatter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/binary/Token$MapIdToValue.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/binary/Token$StartNode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/binary/Token$Value.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/binary/Token.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/copy/HierarchicalStreamCopier.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/json/AbstractJsonWriter$IllegalWriterStateException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/json/AbstractJsonWriter$StackElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/json/AbstractJsonWriter$Type.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/json/AbstractJsonWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/json/JettisonMappedXmlDriver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/json/JettisonStaxWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/json/JsonHierarchicalStreamDriver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/json/JsonHierarchicalStreamWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/json/JsonWriter$Format.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/json/JsonWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/naming/NameCoder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/naming/NameCoderWrapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/naming/NoNameCoder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/naming/StaticNameCoder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/path/Path.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/path/PathTracker.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/path/PathTrackingReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/path/PathTrackingWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/AbstractDocumentReader$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/AbstractDocumentReader$Pointer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/AbstractDocumentReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/AbstractDocumentWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/AbstractPullReader$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/AbstractPullReader$Event.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/AbstractPullReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/AbstractXmlDriver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/AbstractXmlReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/AbstractXmlWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/AbstractXppDomDriver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/AbstractXppDriver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/BEAStaxDriver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/CompactWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/DocumentReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/DocumentWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/Dom4JDriver$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/Dom4JDriver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/Dom4JReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/Dom4JWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/Dom4JXmlWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/DomDriver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/DomReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/DomWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/JDom2Driver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/JDom2Reader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/JDom2Writer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/JDomDriver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/JDomReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/JDomWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/KXml2DomDriver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/KXml2Driver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/PrettyPrintWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/QNameMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/SaxWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/SjsxpDriver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/StandardStaxDriver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/StaxDriver$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/StaxDriver$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/StaxDriver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/StaxReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/StaxWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/TraxSource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/WstxDriver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/XStream11NameCoder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/XStream11XmlFriendlyReplacer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/XmlFriendlyNameCoder$1IntPairList.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/XmlFriendlyNameCoder$IntPair.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/XmlFriendlyNameCoder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/XmlFriendlyReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/XmlFriendlyReplacer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/XmlFriendlyWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/XomDriver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/XomReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/XomWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/Xpp3DomDriver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/Xpp3Driver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/XppDomDriver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/XppDomReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/XppDomWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/XppDriver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/XppReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/xppdom/Xpp3Dom.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/xppdom/Xpp3DomBuilder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/xppdom/XppDom.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/xppdom/XppDomComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/io/xml/xppdom/XppFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/AbstractAttributeAliasingMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/AbstractXmlFriendlyMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/AnnotationConfiguration.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/AnnotationMapper$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/AnnotationMapper$UnprocessedTypesSet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/AnnotationMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/ArrayMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/AttributeAliasingMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/AttributeMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/CGLIBMapper$Marker.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/CGLIBMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/CachingMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/CannotResolveClassException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/ClassAliasingMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/DefaultImplementationsMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/DefaultMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/DynamicProxyMapper$DynamicProxy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/DynamicProxyMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/EnumMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/FieldAliasingMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/ImmutableTypesMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/ImplicitCollectionMapper$ImplicitCollectionMapperForClass.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/ImplicitCollectionMapper$ImplicitCollectionMappingImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/ImplicitCollectionMapper$NamedItemType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/ImplicitCollectionMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/LambdaMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/LocalConversionMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/Mapper$ImplicitCollectionMapping.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/Mapper$Null.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/Mapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/MapperWrapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/OuterClassMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/PackageAliasingMapper$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/PackageAliasingMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/SecurityMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/SystemAttributeAliasingMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/XStream11XmlFriendlyMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/mapper/XmlFriendlyMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/persistence/AbstractFilePersistenceStrategy$ValidFilenameFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/persistence/AbstractFilePersistenceStrategy$XmlMapEntriesIterator$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/persistence/AbstractFilePersistenceStrategy$XmlMapEntriesIterator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/persistence/AbstractFilePersistenceStrategy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/persistence/FilePersistenceStrategy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/persistence/FileStreamStrategy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/persistence/PersistenceStrategy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/persistence/StreamStrategy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/persistence/XmlArrayList.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/persistence/XmlMap$XmlMapEntries.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/persistence/XmlMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/persistence/XmlSet.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/security/AnyTypePermission.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/security/ArrayTypePermission.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/security/CGLIBProxyTypePermission.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/security/ExplicitTypePermission$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/security/ExplicitTypePermission.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/security/ForbiddenClassException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/security/InterfaceTypePermission.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/security/NoPermission.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/security/NoTypePermission.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/security/NullPermission.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/security/PrimitiveTypePermission.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/security/ProxyTypePermission.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/security/RegExpTypePermission.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/security/TypeHierarchyPermission.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/security/TypePermission.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/com/thoughtworks/xstream/security/WildcardTypePermission.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/javax/activation/ActivationDataFlavor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/javax/activation/CommandInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/javax/activation/CommandMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/javax/activation/CommandObject.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/javax/activation/DataContentHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/javax/activation/DataContentHandlerFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/javax/activation/DataHandler$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/javax/activation/DataHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/javax/activation/DataHandlerDataSource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/javax/activation/DataSource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/javax/activation/DataSourceDataContentHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/javax/activation/FileDataSource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/javax/activation/FileTypeMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/javax/activation/MailcapCommandMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/javax/activation/MimeType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/javax/activation/MimeTypeParameterList.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/javax/activation/MimeTypeParseException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/javax/activation/MimetypesFileTypeMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/javax/activation/ObjectDataContentHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/javax/activation/SecuritySupport$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/javax/activation/SecuritySupport$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/javax/activation/SecuritySupport$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/javax/activation/SecuritySupport$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/javax/activation/SecuritySupport$5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/javax/activation/SecuritySupport.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/javax/activation/URLDataSource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/javax/activation/UnsupportedDataTypeException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/org/xmlpull/mxp1/MXParser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/org/xmlpull/v1/XmlPullParser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/org/xmlpull/v1/XmlPullParserException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/org/xmlpull/v1/XmlPullParserFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/org/xmlpull/v1/XmlSerializer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/quickrace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/race/TORCSLauncher.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/race/TorcsConfiguration.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/scr/Action.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/scr/Client.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/scr/Controller$Stage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/scr/Controller.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/scr/DeadSimpleSoloController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/scr/MessageBasedSensorModel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/scr/MessageParser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/scr/SensorModel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/scr/SimpleDriver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/scr/SocketHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../TORCSLauncher/scr_server.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/submission_jar/submission.jar" afterPath="$PROJECT_DIR$/out/artifacts/submission_jar/submission.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/memory/mydriver.mem" afterPath="$PROJECT_DIR$/out/production/memory/mydriver.mem" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/torcs_template/DefaultDriver.class" afterPath="$PROJECT_DIR$/out/production/torcs_template/DefaultDriver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/torcs_template/DefaultDriverAlgorithm.class" afterPath="$PROJECT_DIR$/out/production/torcs_template/DefaultDriverAlgorithm.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/torcs_template/DefaultRace.class" afterPath="$PROJECT_DIR$/out/production/torcs_template/DefaultRace.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/torcs_template/NeuralNetwork.class" afterPath="$PROJECT_DIR$/out/production/torcs_template/NeuralNetwork.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/submission_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/submission_jar.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DefaultDriver.java" afterPath="$PROJECT_DIR$/src/DefaultDriver.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DefaultDriverAlgorithm.java" afterPath="$PROJECT_DIR$/src/DefaultDriverAlgorithm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DefaultRace.java" afterPath="$PROJECT_DIR$/src/DefaultRace.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/NeuralNetwork.java" afterPath="$PROJECT_DIR$/src/NeuralNetwork.java" />
     </list>
     <ignored path="torcs_template.iws" />
@@ -37,8 +578,8 @@
       <file leaf-file-name="DefaultDriver.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DefaultDriver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="137" column="44" selection-start-line="137" selection-start-column="44" selection-end-line="137" selection-end-column="44" />
+            <state relative-caret-position="250">
+              <caret line="200" column="36" selection-start-line="200" selection-start-column="36" selection-end-line="200" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,8 +590,8 @@
       <file leaf-file-name="Driver.class" pinned="false" current-in-tab="false">
         <entry file="jar://$PROJECT_DIR$/lib/cicontest.jar!/cicontest/torcs/controller/Driver.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+            <state relative-caret-position="-546">
+              <caret line="5" column="24" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -69,8 +610,8 @@
       <file leaf-file-name="DefaultDriverAlgorithm.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DefaultDriverAlgorithm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="36">
+              <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -79,8 +620,8 @@
       <file leaf-file-name="DefaultRace.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DefaultRace.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="36">
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -89,8 +630,8 @@
       <file leaf-file-name="NeuralNetwork.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/NeuralNetwork.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+            <state relative-caret-position="234">
+              <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -114,8 +655,8 @@
         <option value="$PROJECT_DIR$/lib/cicontest.jar!/cicontest/algorithm/abstracts/AbstractRace.class" />
         <option value="$PROJECT_DIR$/torcs.properties" />
         <option value="$PROJECT_DIR$/src/DefaultRace.java" />
-        <option value="$PROJECT_DIR$/src/DefaultDriverAlgorithm.java" />
         <option value="$PROJECT_DIR$/src/NeuralNetwork.java" />
+        <option value="$PROJECT_DIR$/src/DefaultDriverAlgorithm.java" />
         <option value="$PROJECT_DIR$/src/DefaultDriver.java" />
       </list>
     </option>
@@ -164,9 +705,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -225,7 +766,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Weights_3.csv" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;jar:///home/anand/UvA/Period 2/Computational Intelligence/CI-Group40/torcs_template/lib/cicontest.jar!/cicontest/algorithm/abstracts/AbstractAlgorithm.class&#10;n&#9;FILE&#9;file:///home/anand/UvA/Period 2/Computational Intelligence/CI-Group40/torcs_template/src/NeuralNetwork.java&#10;neur&#9;FILE&#9;file:///home/anand/UvA/Period 2/Computational Intelligence/CI-Group40/torcs_template/src/NeuralNetwork.java&#10;Trackmap&#9;PSI&#9;JAVA://cicontest.algorithm.abstracts.map.TrackMap&#10;torcs&#9;FILE&#9;file:///home/anand/UvA/Period 2/Computational Inteligence/CI-Group40/torcs_template/torcs.properties&#10;TORCS&#9;FILE&#9;file://C:/Users/Anand/Desktop/UvA/Period 2/Computational Intelligence/CI-Group40/torcs_template/lib/TORCSLauncher.jar&#10;cic&#9;PSI&#9;JAVA://cicontest.torcs.client.CiClient&#10;abstrac&#9;PSI&#9;JAVA://cicontest.algorithm.abstracts.AbstractAlgorithm&#10;Drivers&#9;PSI&#9;JAVA://cicontest.algorithm.abstracts.DriversUtils" />
   </component>
   <component name="RecentsManager">
@@ -671,7 +1212,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="75" selection-start-line="4" selection-start-column="75" selection-end-line="4" selection-end-column="75" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -735,7 +1275,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="75" selection-start-line="4" selection-start-column="75" selection-end-line="4" selection-end-column="75" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -799,7 +1338,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="75" selection-start-line="4" selection-start-column="75" selection-end-line="4" selection-end-column="75" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -939,14 +1477,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/cicontest.jar!/cicontest/torcs/controller/Driver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Desktop/jdk1.8.0_111/jre/lib/rt.jar!/sun/misc/FloatingDecimal.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -958,6 +1488,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NeuralNetwork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -970,34 +1507,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DefaultDriverAlgorithm.java">
+    <entry file="jar://$PROJECT_DIR$/lib/cicontest.jar!/cicontest/torcs/controller/Driver.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="-546">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DefaultRace.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="36">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/NeuralNetwork.java">
+    <entry file="file://$PROJECT_DIR$/src/DefaultDriverAlgorithm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+        <state relative-caret-position="36">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DefaultDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="137" column="44" selection-start-line="137" selection-start-column="44" selection-end-line="137" selection-end-column="44" />
+        <state relative-caret-position="250">
+          <caret line="200" column="36" selection-start-line="200" selection-start-column="36" selection-end-line="200" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1009,7 +1546,12 @@
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
-          <artifact-editor />
+          <artifact-editor>
+            <show-content>
+              <type id="library" />
+              <type id="artifact" />
+            </show-content>
+          </artifact-editor>
           <last-edited>submission:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">

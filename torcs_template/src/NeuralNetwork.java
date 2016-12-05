@@ -12,11 +12,11 @@ public class NeuralNetwork implements Serializable {
 
     NeuralNetwork(int inputs, int hidden, int outputs) {
         System.out.println("-------------- bella zio costruisco un NN ------------");
-        String path = "/home/anand/UvA/Period 2/Computational Intelligence/Codes/Simple_NN/";
-        String files0 = path+"Weights_0.csv";
-        String files1 = path+"Weights_1.csv";
-        String files2 = path+"Weights_2.csv";
-        String files3 = path+"Weights_3.csv";
+        //String path = "/home/anand/UvA/Period 2/Computational Intelligence/Codes/Simple_NN/";
+        String files0 = "./src/Weights_0.csv";
+        String files1 = "./src/Weights_1.csv";
+        String files2 = "./src/Weights_2.csv";
+        String files3 = "./src/Weights_3.csv";
 
         BufferedReader br = null;
         String line = "";

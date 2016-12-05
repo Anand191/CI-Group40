@@ -19,7 +19,7 @@ public class DefaultDriver extends AbstractDriver {
 
     public DefaultDriver() {
         initialize();
-        BufferedWriter bw=null;
+        /*BufferedWriter bw=null;
         try {
             bw = new BufferedWriter(new FileWriter("/home/anand/UvA/Period 2/data.txt", true));
         }catch (IOException ioe) {
@@ -27,9 +27,8 @@ public class DefaultDriver extends AbstractDriver {
             niter=0;
         }
 
-        outfile = bw;
+        outfile = bw;*/
         neuralNetwork = new NeuralNetwork(12, 8, 2);
-        outfile=bw;
         //neuralNetwork.storeGenome();
         /*neuralNetwork = neuralNetwork.loadGenome();
         System.out.println("-------------- NN caricato ------------");
@@ -37,9 +36,6 @@ public class DefaultDriver extends AbstractDriver {
             neuralNetwork.weights[i]+=(Math.random()-0.5)/10;
         for(int i=0;i<19;i++)
             System.out.println(neuralNetwork.weights[i]);*/
-
-
-
     }
 
     private void initialize() {
@@ -127,156 +123,106 @@ public class DefaultDriver extends AbstractDriver {
             turn += 0.05;
         }
 
-            action.steering = turn*6/7.0D + DriversUtils.alignToTrackAxis(sensors, 0.5)/7.0D;
 
         maxspeed = neuralNetwork.getOutput(sensors);
-        System.out.println(maxspeed);
+        //System.out.println(maxspeed);
 
         action.accelerate = 1.0;
         action.brake = 0.0D;
 
-        maxspeed = Math.max(30.0D,maxspeed);
+        maxspeed = Math.max(30.0D, maxspeed);
 
-        if (sensors.getSpeed()>maxspeed){
+        boolean TL = turn > 0;
+        boolean TR = !TL;
+
+        boolean flagFi = true;
+        boolean flagLs = true;
+        String position;
+        for (int i = 0; i < 36; i++){
+            if (i >= 9 & i<28){
+                flagFi = flagFi & (sensors.getOpponentSensors()[i] == 200.0);
+            }
+            else {
+                flagLs = flagLs & (sensors.getOpponentSensors()[i] == 200.0);
+            }
+        }
+        if (!flagFi) {
+            if (!flagLs) {
+                position = "middle";
+            }
+            else{
+                position = "last";
+            }
+        }
+        else{
+            position = "first";
+        }
+
+        boolean C1 = false;
+        boolean R1 = false;
+        boolean L1 = false;
+        boolean R2 = false;
+        boolean L2 = false;
+        for (int i = 14; i < 23; i++) { //check for enemy close in front of you
+            C1 = C1 | (sensors.getOpponentSensors()[i] < 10.0);
+        }
+        for (int i = 23; i < 27; i++) { // check for enemy close on you front-right
+            R1 = R1 | (sensors.getOpponentSensors()[i] < 10.0);
+        }
+        for (int i = 10; i < 15; i++) { // check for enemy close on you front-left
+            L1 = L1 | (sensors.getOpponentSensors()[i] < 10.0);
+        }
+        for (int i = 28; i < 33; i++) { // check for enemy close on you front-right
+            R2 = R2 | (sensors.getOpponentSensors()[i] < 10.0);
+        }
+        for (int i = 4; i < 9; i++) { // check for enemy close on you front-left
+            L2 = L2 | (sensors.getOpponentSensors()[i] < 10.0);
+        }
+
+        if (position == "first"){
+            maxspeed *= 1.15D;
+            action.steering = turn*6/7.0D + DriversUtils.alignToTrackAxis(sensors, 0.5)/7.0D;
+
+        }
+        else if (position == "middle") {
+            action.steering = turn*9/10.0D + DriversUtils.alignToTrackAxis(sensors, 0.5)/10.0D;
+            maxspeed *= 1.25D;
+        }
+        else if (position == "last"){
+            maxspeed *= 1.4D;
+            action.steering = turn;
+        }
+
+        /*if ((L1 & TL)|(R1&TR)){
+            action.steering *= 0.8;
+        }
+
+        if ((L2 & TL) | (R2 & TR)) {
+            action.steering *= 1.1D;
+        }
+
+        if ((L1 & TR)|(R1 & TL)){
+            action.accelerate = 0.65;
+        }*/
+
+        if (sensors.getSpeed()>maxspeed | C1 ){
             action.accelerate = 0.0D;
             action.brake = 1.0D;
         }
 
-        /*double[][] s = new double[19][2];
-
-        double maxR=0.0D;
-        double maxL = 0.0D;
-        int idxL = 0, idxR = 0;
-
-        for(int i=0; i<19; i++){
-            s[i][0] = -Math.cos(Math.PI*i/18)*tracksensor[i];
-            s[i][1] = Math.sin(Math.PI*i/18)*tracksensor[i];
-            if (tracksensor[i]>maxL){
-                maxL = tracksensor[i];
-                idxL = i;
-            }
-            if (tracksensor[18-i] > maxR){
-                maxR = tracksensor[i];
-                idxR = i;
-            }
-        }
-
-        double[][] r = new double[19][2];
-        double[][] l = new double[19][2];
-        double norm;
-
-        for(int i=0; i<idxL; i++){
-            norm = Math.pow(Math.pow(s[i+1][0]-s[i][0], 2.0D)+ Math.pow(s[i+1][1]-s[i][1], 2.0D), 0.5D);
-            r[i][0] = (s[i+1][0] - s[i][0]) / norm;
-            r[i][1] = (s[i+1][1] - s[i][1]) / norm;
-
-        }
-
-        for(int i=0; i<18-idxR; i++){
-            norm = Math.pow(Math.pow(s[17-i][0]-s[18-i][0], 2.0D)+ Math.pow(s[17-i][1]-s[18-i][1], 2.0D), 0.5D);
-            l[i][0] = (s[17-i][0] - s[18-i][0]) / norm;
-            l[i][1] = (s[17-i][1] - s[18-i][1]) / norm;
-        }
-
-        double rho = 0.0D;
-        double dot;
-        for (int i=0; i<idxL; i++){
-            dot = l[i][0]*l[i+1][0] + l[i][1]*l[i+1][1];
-            rho += Math.acos(dot)*180/Math.PI * Math.signum(l[i][0]*l[i+1][1] - l[i][1]*l[i+1][0]);
-        }
-        for (int i=0; i < 17-idxR; i++){
-            dot = r[i][0]*r[i+1][0] + r[i][1]*r[i+1][1];
-            rho += Math.acos(dot)*180/Math.PI * Math.signum(r[i][0]*r[i+1][1] - r[i][1]*r[i+1][0]);
-        }
-        System.out.println(rho);
-        double aR = Math.abs(rho);
-        double lambda0, lambda1;
-        if (aR < 3){
-            lambda0 = 250.0D;
-            lambda1 = -1.0D;
-        }else if(aR < 25){
-            lambda0 = 180.0D;
-            lambda1 = -1.0D;
-        }else if(aR < 35){
-            lambda0 = 140.0D;
-            lambda1 = -1.0D;
-        }else if(aR < 45){
-            lambda0 = 100.0D;
-            lambda1 = -1.0D;
-        } else if(aR < 55){
-            lambda0 = 75.0D;
-            lambda1 = -1.0D;
-            turn *= 2;
-        } else{
-            lambda0 = 60.0D;
-            lambda1 = -1.0D;
-            turn *= 3;
-        }
-        double a = lambda1*sensors.getSpeed() + lambda0;
-        action.accelerate = Math.max(a, 0.0D);
-        action.brake = Math.max(-a, 0.0D);
-
-        if (tracksensor[0] < 1.5){
-            turn -= 0.05;
-        }
-        else if (tracksensor[18] < 1.5){
-            turn += 0.05;
-
-        }
-        action.steering = 3*turn/5.0D + 2*DriversUtils.alignToTrackAxis(sensors, 0.5)/5.0D;
-
-
-        System.out.println(sensors.getZSpeed());
-        System.out.println(sensors.getSpeed());
-
-        if (sensors.getZSpeed()/sensors.getSpeed() > 0.01D){
-            if (sensors.getSpeed()> 150){
-                action.accelerate = 0.0D;
-                action.brake = 0.8D;
-            }
-        }*/
-
-
-
-        //double turn = (tracksensor[8] - tracksensor[10])/(tracksensor[10] + tracksensor[8]);
-
-
-
-
-
-        /*double alpha0 = 1.0D;
-        double alpha1 = 1.0D;
-        double beta0 = 1.0D;
-        double beta1 = 1.0D;
-        double brakeThreshold = Math.pow(10,8);
-
-        brakeThreshold  *= Math.pow(alpha0*sensors.getSpeed(), alpha1);
-
-        double steepness = Math.exp( Math.max(tracksensor[maxI-1], tracksensor[maxI+1]) - max );
-        brakeThreshold *= Math.pow(beta0/steepness , beta1);
-
-        double theta = 10.0;
-        double val;
-        action.accelerate = 1.0;
-        action.brake = 0.0D;
-        val = Math.tanh(theta*(max - brakeThreshold));
-
-        action.accelerate = Math.max(val, 0);
-        action.brake = Math.max(0, -val);
-
-        if (sensors.getSpeed() <= 60.0D) {
-            action.accelerate = 1.0D;
-            action.brake = 0.0D;
-        }*/
-
-
-        if(niter%100==0){
+        /*if(niter%10==0) {
 
         System.out.println("--------------" + getDriverName() + "--------------");
         System.out.println("Steering: " + action.steering);
         System.out.println("Acceleration: " + action.accelerate);
         System.out.println("Brake: " + action.brake);
         System.out.println("-------------------"+niter+"--------+-------------");}
+            System.out.println("Rank:" + sensors.getRacePosition());
+            for (int i = 0; i < 36; i++) {
+                System.out.print(" " + sensors.getOpponentSensors()[i]);
+            }
+            System.out.println();
+        }
 
         try {
             outfile.write(Double.toString(action.accelerate));
@@ -302,7 +248,7 @@ public class DefaultDriver extends AbstractDriver {
                 outfile.flush();
         } catch (IOException ioe) {
             ioe.printStackTrace();
-        }
+        }*/
 
 
         return action;
