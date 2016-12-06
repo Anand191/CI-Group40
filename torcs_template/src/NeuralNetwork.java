@@ -13,23 +13,20 @@ public class NeuralNetwork implements Serializable {
     NeuralNetwork(int inputs, int hidden, int outputs) {
         System.out.println("-------------- bella zio costruisco un NN ------------");
         //String path = "/home/anand/UvA/Period 2/Computational Intelligence/Codes/Simple_NN/";
-        String files0 = "./src/Weights_0.csv";
-        String files1 = "./src/Weights_1.csv";
-        String files2 = "./src/Weights_2.csv";
-        String files3 = "./src/Weights_3.csv";
+        InputStream input;
 
         BufferedReader br = null;
         String line = "";
-        String cvsSplitBy = ",";
+        String csvSplitBy = ",";
 
         try {
-
-            br = new BufferedReader(new FileReader(files0));
+            input = getClass().getResourceAsStream("/Weights/Weights_0.csv");
+            br = new BufferedReader(new InputStreamReader(input));
             int i = 0;
             while ((line = br.readLine()) != null) {
 
                 // use comma as separator
-                String[] w = line.split(cvsSplitBy);
+                String[] w = line.split(csvSplitBy);
 
                 for (int j=0; j<w.length; j++){
                    w_0 [i][j] = Double.parseDouble(w[j]);
@@ -45,13 +42,12 @@ public class NeuralNetwork implements Serializable {
         }
 
         try {
-
-            br = new BufferedReader(new FileReader(files1));
+            input = getClass().getResourceAsStream("/Weights/Bias_0.csv");
+            br = new BufferedReader(new InputStreamReader(input));
             int i = 0;
             while ((line = br.readLine()) != null) {
-
                 // use comma as separator
-                b_0 [i] = Double.parseDouble(line.split(cvsSplitBy)[0]);
+                b_0 [i] = Double.parseDouble(line.split(csvSplitBy)[0]);
                 i++;
             }
 
@@ -62,16 +58,13 @@ public class NeuralNetwork implements Serializable {
         }
 
         try {
-
-            br = new BufferedReader(new FileReader(files2));
+            input = getClass().getResourceAsStream("/Weights/Weights_1.csv");
+            br = new BufferedReader(new InputStreamReader(input));
             int i =0;
             while ((line = br.readLine()) != null) {
-
                 // use comma as separator
-
-                w_1 [i] = Double.parseDouble(line.split(cvsSplitBy)[0]);
+                w_1 [i] = Double.parseDouble(line.split(csvSplitBy)[0]);
                 i++;
-
             }
 
         } catch (FileNotFoundException e) {
@@ -81,14 +74,12 @@ public class NeuralNetwork implements Serializable {
         }
 
         try {
-
-            br = new BufferedReader(new FileReader(files3));
+            input = getClass().getResourceAsStream("/Weights/Bias_1.csv");
+            br = new BufferedReader(new InputStreamReader(input));
             if ((line = br.readLine()) != null) {
-
                 // use comma as separator
-                    b_1  = Double.parseDouble(line.split(cvsSplitBy)[0]);
+                    b_1  = Double.parseDouble(line.split(csvSplitBy)[0]);
             }
-
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {

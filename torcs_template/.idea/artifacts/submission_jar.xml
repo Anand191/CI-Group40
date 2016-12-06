@@ -5,10 +5,9 @@
       <element id="module-output" name="torcs_template" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/cicontest.jar" path-in-jar="/" />
       <element id="file-copy" path="$PROJECT_DIR$/src/torcs.properties" />
-      <element id="file-copy" path="$PROJECT_DIR$/src/Weights_0.csv" />
-      <element id="file-copy" path="$PROJECT_DIR$/src/Weights_1.csv" />
-      <element id="file-copy" path="$PROJECT_DIR$/src/Weights_2.csv" />
-      <element id="file-copy" path="$PROJECT_DIR$/src/Weights_3.csv" />
+      <element id="directory" name="Weights">
+        <element id="dir-copy" path="$PROJECT_DIR$/Weights" />
+      </element>
     </root>
   </artifact>
 </component>

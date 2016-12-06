@@ -1,0 +1,4 @@
+dataset1= dataset where y==1
+dataset0 = dataset where y==0
+newdataset=sample(dataset0, 100k)+sample(dataset1, 100k)
+apply keras to newdataset

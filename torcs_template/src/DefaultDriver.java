@@ -74,7 +74,7 @@ public class DefaultDriver extends AbstractDriver {
 
     @Override
     public String getDriverName() {
-        return "Example Controller";
+        return "BrumBrum40";
     }
 
     @Override
@@ -114,7 +114,6 @@ public class DefaultDriver extends AbstractDriver {
             }
         }
         double turn = (9 - maxI)/9.0;
-        double maxspeed;
 
         if (tracksensor[0] < 1.5){
             turn -= 0.05;
@@ -123,29 +122,47 @@ public class DefaultDriver extends AbstractDriver {
             turn += 0.05;
         }
 
-
-        maxspeed = neuralNetwork.getOutput(sensors);
-        //System.out.println(maxspeed);
+        double maxspeed = neuralNetwork.getOutput(sensors);
 
         action.accelerate = 1.0;
         action.brake = 0.0D;
 
         maxspeed = Math.max(30.0D, maxspeed);
 
-        boolean TL = turn > 0;
-        boolean TR = !TL;
+        boolean TL = turn > 0.1;
+        boolean TR = turn < -0.1;
 
-        boolean flagFi = true;
-        boolean flagLs = true;
-        String position;
-        for (int i = 0; i < 36; i++){
-            if (i >= 9 & i<28){
-                flagFi = flagFi & (sensors.getOpponentSensors()[i] == 200.0);
-            }
-            else {
-                flagLs = flagLs & (sensors.getOpponentSensors()[i] == 200.0);
-            }
+        double mC1 = 200.0D;
+        double mC2 = 200.0D;
+        double mR1 = 200.0D;
+        double mR2 = 200.0D;
+        double mL1 = 200.0D;
+        double mL2 = 200.0D;
+        for (int i = 14; i < 23; i++) { //check for enemy close in front of you
+            mC1 = Math.min(mC1, sensors.getOpponentSensors()[i]);
         }
+        for (int i = 23; i < 27; i++) { // check for enemy close on you front-right
+            mR1 = Math.min(mR1, sensors.getOpponentSensors()[i]);
+        }
+        for (int i = 10; i < 15; i++) { // check for enemy close on you front-left
+            mL1 = Math.min(mL1, sensors.getOpponentSensors()[i]);
+        }
+        for (int i = 28; i < 33; i++) { // check for enemy close on you back-right
+            mR2 = Math.min(mR2, sensors.getOpponentSensors()[i]);
+        }
+        for (int i = 4; i < 9; i++) { // check for enemy close on you back-left
+            mL2 = Math.min(mL2, sensors.getOpponentSensors()[i]);
+        }
+        for (int i = 0; i < 4; i++) { // check for enemy close on you back-left
+            mC2 = Math.min(mC2, sensors.getOpponentSensors()[i]);
+        }
+        for (int i = 33; i < 36; i++) { // check for enemy close on you back-left
+            mC2 = Math.min(mC2, sensors.getOpponentSensors()[i]);
+        }
+
+        boolean flagFi = Math.min(Math.min(mR1, mL1), mC1) == 200;
+        boolean flagLs = Math.min(Math.min(mR2, mL2), mC2) == 200;
+        String position;
         if (!flagFi) {
             if (!flagLs) {
                 position = "middle";
@@ -157,28 +174,6 @@ public class DefaultDriver extends AbstractDriver {
         else{
             position = "first";
         }
-
-        boolean C1 = false;
-        boolean R1 = false;
-        boolean L1 = false;
-        boolean R2 = false;
-        boolean L2 = false;
-        for (int i = 14; i < 23; i++) { //check for enemy close in front of you
-            C1 = C1 | (sensors.getOpponentSensors()[i] < 10.0);
-        }
-        for (int i = 23; i < 27; i++) { // check for enemy close on you front-right
-            R1 = R1 | (sensors.getOpponentSensors()[i] < 10.0);
-        }
-        for (int i = 10; i < 15; i++) { // check for enemy close on you front-left
-            L1 = L1 | (sensors.getOpponentSensors()[i] < 10.0);
-        }
-        for (int i = 28; i < 33; i++) { // check for enemy close on you front-right
-            R2 = R2 | (sensors.getOpponentSensors()[i] < 10.0);
-        }
-        for (int i = 4; i < 9; i++) { // check for enemy close on you front-left
-            L2 = L2 | (sensors.getOpponentSensors()[i] < 10.0);
-        }
-
         if (position == "first"){
             maxspeed *= 1.15D;
             action.steering = turn*6/7.0D + DriversUtils.alignToTrackAxis(sensors, 0.5)/7.0D;
@@ -193,19 +188,31 @@ public class DefaultDriver extends AbstractDriver {
             action.steering = turn;
         }
 
-        /*if ((L1 & TL)|(R1&TR)){
-            action.steering *= 0.8;
+        boolean C1 = mC1<10;
+        boolean R1 = mR1<10;
+        boolean L1 = mL1<10;
+        boolean C2 = mC2<10;
+        boolean R2 = mR2<10;
+        boolean L2 = mL2<10;
+
+
+        if ((L1 & TL)|(R1&TR)){ // give berth
+            action.steering *= 0.9;
+        }
+        if ((L2 & TL) | (R2 & TR)) { // close
+            action.steering *= 1.25D;
+        }
+        if ((L1 & TR)|(R1 & TL)){ // slow down
+            action.accelerate = 0.5D;
+        }
+        if (((mL2<35) & !(TR|TL))){ // get in front (left)
+            action.steering += 0.075D;
+        }
+        if (((mR2<35) & !(TR|TL))){ // get in front (right)
+            action.steering -= 0.075D;
         }
 
-        if ((L2 & TL) | (R2 & TR)) {
-            action.steering *= 1.1D;
-        }
-
-        if ((L1 & TR)|(R1 & TL)){
-            action.accelerate = 0.65;
-        }*/
-
-        if (sensors.getSpeed()>maxspeed | C1 ){
+        if (sensors.getSpeed()>maxspeed | C1 ){ //brake if you go too fast | brake if you are hitting someone
             action.accelerate = 0.0D;
             action.brake = 1.0D;
         }

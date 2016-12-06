@@ -11,7 +11,7 @@ import race.TorcsConfiguration;
 public class DefaultDriverAlgorithm extends AbstractAlgorithm {
 
     private static final long serialVersionUID = 654963126362653L;
-    int n=3;
+    int n=1;
     DefaultDriverGenome[] drivers = new DefaultDriverGenome[n];
     int[] results = new int[n];
 
